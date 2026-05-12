@@ -3,288 +3,287 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="RMB Solutions — tecnologia confiável, suporte ágil e soluções sob medida para reduzir custos e aumentar produtividade." />
-  <title>RMB Solutions | Conectando soluções de TI</title>
+  <title>RMB Solutions | Suporte Técnico de TI para Empresas</title>
+  <meta name="description" content="Suporte técnico de TI para empresas: Service Desk, atendimento remoto, field service, gestão de ativos, infraestrutura, redes, backup e Microsoft 365." />
+  <meta name="theme-color" content="#0f172a" />
+  <meta property="og:title" content="RMB Solutions | Suporte Técnico de TI para Empresas" />
+  <meta property="og:description" content="Reduza paradas, organize chamados e aumente a produtividade dos usuários com suporte técnico de TI remoto e presencial." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rmbsolutions.com.br/" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-2: #0f172a;
+      --card: rgba(255,255,255,.08);
+      --card-2: rgba(255,255,255,.12);
+      --text: #e5edf8;
+      --muted: #a8b3c7;
+      --brand: #38bdf8;
+      --brand-2: #22c55e;
+      --line: rgba(255,255,255,.14);
+      --white: #ffffff;
+      --shadow: 0 24px 70px rgba(0,0,0,.35);
+      --radius: 22px;
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(56,189,248,.22), transparent 34rem),
+        radial-gradient(circle at top right, rgba(34,197,94,.14), transparent 34rem),
+        linear-gradient(180deg, #07111f 0%, #0f172a 48%, #07111f 100%);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; }
+    .container { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+    .nav {
+      position: sticky; top: 0; z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(7,17,31,.78);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; min-height: 78px; gap: 22px; }
+    .logo { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: -.03em; }
+    .logo-mark { width: 42px; height: 42px; border-radius: 14px; display: grid; place-items: center; background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #07111f; box-shadow: 0 10px 26px rgba(56,189,248,.24); }
+    .nav-links { display: flex; gap: 22px; align-items: center; color: var(--muted); font-size: 14px; }
+    .nav-links a:hover { color: var(--white); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 13px 18px; border-radius: 999px; font-weight: 700; border: 1px solid transparent; transition: transform .2s, background .2s, border-color .2s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #06111f; box-shadow: 0 18px 42px rgba(56,189,248,.22); }
+    .btn-ghost { border-color: var(--line); background: rgba(255,255,255,.05); color: var(--white); }
+    .hero { padding: 86px 0 64px; }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 44px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; color: #c7f9ff; background: rgba(56,189,248,.08); font-size: 13px; font-weight: 700; }
+    h1, h2, h3 { line-height: 1.08; margin: 0; letter-spacing: -.045em; }
+    h1 { font-size: clamp(42px, 6vw, 74px); margin-top: 22px; }
+    h2 { font-size: clamp(32px, 4vw, 52px); }
+    h3 { font-size: 22px; }
+    .lead { color: var(--muted); font-size: clamp(18px, 2vw, 22px); max-width: 720px; margin: 24px 0 30px; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 34px; }
+    .point { padding: 14px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.05); color: var(--muted); font-size: 14px; }
+    .point strong { color: var(--white); display: block; font-size: 18px; }
+    .dashboard { border: 1px solid var(--line); border-radius: 30px; background: linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.05)); box-shadow: var(--shadow); padding: 22px; }
+    .screen { border-radius: 22px; background: #08111f; border: 1px solid var(--line); overflow: hidden; }
+    .screen-top { padding: 14px 16px; border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; color: var(--muted); font-size: 13px; }
+    .dots span { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,.35); margin-right: 5px; }
+    .ticket { margin: 16px; padding: 16px; border-radius: 18px; background: rgba(255,255,255,.07); border: 1px solid var(--line); }
+    .ticket small { color: var(--brand); font-weight: 800; }
+    .status { display: flex; justify-content: space-between; gap: 12px; margin-top: 10px; color: var(--muted); font-size: 14px; }
+    .bar { height: 9px; background: rgba(255,255,255,.1); border-radius: 999px; margin-top: 12px; overflow: hidden; }
+    .bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--brand), var(--brand-2)); border-radius: inherit; }
+    section { padding: 76px 0; }
+    .section-head { display: flex; justify-content: space-between; gap: 24px; align-items: end; margin-bottom: 28px; }
+    .section-head p { color: var(--muted); max-width: 590px; margin: 0; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .card { border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); padding: 24px; min-height: 100%; }
+    .card:hover { background: var(--card-2); }
+    .icon { width: 46px; height: 46px; border-radius: 15px; display: grid; place-items: center; background: rgba(56,189,248,.14); color: var(--brand); font-weight: 900; margin-bottom: 18px; }
+    .card p, .card li { color: var(--muted); }
+    ul { padding-left: 18px; margin: 14px 0 0; }
+    li { margin: 8px 0; }
+    .split { display: grid; grid-template-columns: .9fr 1.1fr; gap: 26px; align-items: start; }
+    .steps { counter-reset: step; display: grid; gap: 14px; }
+    .step { counter-increment: step; display: grid; grid-template-columns: 48px 1fr; gap: 16px; padding: 20px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(255,255,255,.06); }
+    .step::before { content: counter(step); width: 42px; height: 42px; border-radius: 14px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #06111f; display: grid; place-items: center; font-weight: 900; }
+    .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .metric { text-align: center; padding: 22px 14px; border-radius: var(--radius); border: 1px solid var(--line); background: rgba(255,255,255,.06); }
+    .metric strong { display: block; font-size: 30px; color: var(--white); }
+    .metric span { color: var(--muted); font-size: 13px; }
+    .cta { padding: 42px; border: 1px solid rgba(56,189,248,.28); border-radius: 32px; background: linear-gradient(135deg, rgba(56,189,248,.18), rgba(34,197,94,.12)); box-shadow: var(--shadow); display: grid; grid-template-columns: 1fr auto; gap: 22px; align-items: center; }
+    .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .contact-box { padding: 24px; border-radius: var(--radius); border: 1px solid var(--line); background: rgba(255,255,255,.07); }
+    footer { padding: 32px 0; border-top: 1px solid var(--line); color: var(--muted); }
+    @media (max-width: 920px) {
+      .hero-grid, .split, .cta { grid-template-columns: 1fr; }
+      .grid-4, .grid-3, .metrics, .hero-points { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 620px) {
+      .container { width: min(100% - 28px, var(--max)); }
+      .grid-4, .grid-3, .metrics, .hero-points, .contact { grid-template-columns: 1fr; }
+      .hero { padding-top: 58px; }
+      section { padding: 54px 0; }
+      .cta { padding: 26px; }
+      .btn { width: 100%; }
+    }
+  </style>
 </head>
 <body>
-  <header class="header" id="topo">
-    <div class="container nav">
-      <a class="brand" href="#topo" aria-label="Ir para o topo">
-        <span class="brand-mark" aria-hidden="true">R</span>
-        <span class="brand-text">
-          <strong>RMB</strong> Solutions
-          <small>Conectando soluções de TI</small>
-        </span>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="#top" aria-label="RMB Solutions">
+        <span class="logo-mark">R</span>
+        <span>RMB Solutions</span>
       </a>
-
-      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="nav-links" aria-label="Navegação">
+      <nav class="nav-links" aria-label="Menu principal">
         <a href="#servicos">Serviços</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#depoimentos">Depoimentos</a>
-        <a href="#contato" class="btn btn-sm">Fale Conosco</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#indicadores">Indicadores</a>
+        <a href="#contato">Contato</a>
       </nav>
+      <a class="btn btn-primary" href="https://wa.me/5511977350757?text=Ol%C3%A1%2C%20quero%20uma%20avalia%C3%A7%C3%A3o%20de%20suporte%20t%C3%A9cnico%20de%20TI" target="_blank" rel="noopener">Falar no WhatsApp</a>
     </div>
   </header>
 
-  <main>
+  <main id="top">
     <section class="hero">
       <div class="container hero-grid">
-        <div class="hero-copy">
-          <h1>Tecnologia confiável, suporte ágil e soluções sob medida.</h1>
-          <p class="lead">
-            A RMB Solutions entrega serviços de TI com foco em <strong>reduzir custos</strong> e
-            <strong>aumentar produtividade</strong> — do backup à infraestrutura, cloud e redes.
-          </p>
-          <div class="hero-cta">
-            <a class="btn" href="#contato">Solicitar avaliação</a>
+        <div>
+          <span class="eyebrow">Suporte técnico de TI para empresas</span>
+          <h1>Menos chamados parados. Mais produtividade para sua equipe.</h1>
+          <p class="lead">A RMB Solutions estrutura e opera o suporte técnico da sua empresa com atendimento remoto e presencial, gestão de acessos, microinformática, redes, servidores, backup e Microsoft 365.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contato">Solicitar avaliação</a>
             <a class="btn btn-ghost" href="#servicos">Ver serviços</a>
           </div>
-
-          <ul class="hero-bullets" aria-label="Diferenciais">
-            <li><strong>Backup &amp; DR</strong> com estratégia 3-2-1</li>
-            <li><strong>Infra &amp; Servidores</strong> (Windows Server, AD, DNS, DHCP)</li>
-            <li><strong>Redes &amp; Segurança</strong> (VPN, L2L, SonicWall, MikroTik)</li>
-          </ul>
-        </div>
-
-        <div class="hero-card" role="region" aria-label="Resumo de atendimento">
-          <div class="card">
-            <h2 class="card-title">Atendimento</h2>
-            <div class="card-row">
-              <span class="k">Seg–Sex</span>
-              <span class="v">09h às 18h</span>
-            </div>
-            <div class="card-row">
-              <span class="k">Emergencial</span>
-              <span class="v">24/7 (sob acordo)</span>
-            </div>
-            <div class="card-row">
-              <span class="k">Local</span>
-              <span class="v">Santana de Parnaíba – Centro (SP)</span>
-            </div>
-            <hr />
-            <p class="muted">Responda mais rápido a incidentes e reduza indisponibilidades com uma operação de TI bem governada.</p>
-            <div class="card-cta">
-              <a class="btn btn-sm" href="https://wa.me/5511977350757" target="_blank" rel="noopener">WhatsApp</a>
-              <a class="btn btn-sm btn-ghost" href="mailto:contato@rmbsolutions.com.br">E-mail</a>
-            </div>
+          <div class="hero-points" aria-label="Destaques">
+            <div class="point"><strong>N1 / N1.5</strong>triagem, orientação e resolução</div>
+            <div class="point"><strong>Remoto + local</strong>atendimento flexível</div>
+            <div class="point"><strong>SLA e relatórios</strong>visão clara da operação</div>
           </div>
         </div>
-      </div>
 
-      <div class="container trust">
-        <p class="muted">Ferramentas &amp; plataformas com as quais atuamos:</p>
-        <div class="trust-logos" aria-label="Tecnologias">
-          <span>Arcserve (UDP)</span>
-          <span>AWS S3</span>
-          <span>AWS Glacier</span>
-          <span>Microsoft 365</span>
-          <span>SonicWall</span>
-          <span>MikroTik</span>
-          <span>Cisco</span>
-          <span>Ubiquiti</span>
-        </div>
+        <aside class="dashboard" aria-label="Painel ilustrativo de suporte">
+          <div class="screen">
+            <div class="screen-top"><div class="dots"><span></span><span></span><span></span></div><strong>Central de suporte</strong></div>
+            <div class="ticket">
+              <small>CHAMADO #1042 · PRIORIDADE ALTA</small>
+              <h3>Usuário sem acesso ao sistema</h3>
+              <div class="status"><span>Triagem concluída</span><strong>12 min</strong></div>
+              <div class="bar"><span style="width: 82%"></span></div>
+            </div>
+            <div class="ticket">
+              <small>MANUTENÇÃO PREVENTIVA</small>
+              <h3>Atualizações, limpeza e otimização</h3>
+              <div class="status"><span>Agenda mensal</span><strong>Em dia</strong></div>
+              <div class="bar"><span style="width: 96%"></span></div>
+            </div>
+            <div class="ticket">
+              <small>INVENTÁRIO</small>
+              <h3>Ativos, licenças e equipamentos</h3>
+              <div class="status"><span>Relatório gerencial</span><strong>100%</strong></div>
+              <div class="bar"><span style="width: 100%"></span></div>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section class="section" id="servicos">
+    <section id="servicos">
       <div class="container">
         <div class="section-head">
-          <h2>Serviços de TI</h2>
-          <p class="muted">Pacotes flexíveis para operação, projeto e melhoria contínua — presencial ou remoto.</p>
+          <h2>Suporte de TI completo para o dia a dia da operação.</h2>
+          <p>Atendimento para usuários, estações, notebooks, aplicativos corporativos, conectividade, acessos e infraestrutura de apoio.</p>
         </div>
-
-        <div class="grid cards">
+        <div class="grid-4">
           <article class="card">
-            <h3>Backup &amp; Proteção de Dados</h3>
-            <ul>
-              <li>Implantação e gestão com Arcserve (UDP), AWS S3 e Glacier</li>
-              <li>Políticas, rotinas automatizadas e backup híbrido</li>
-              <li>Monitoramento de jobs, logs e relatórios</li>
-              <li>Restores, validação e testes de Disaster Recovery</li>
-              <li>Relatórios de SLA, GMUD e documentação</li>
-            </ul>
+            <div class="icon">01</div>
+            <h3>Service Desk</h3>
+            <p>Centralização dos chamados por WhatsApp, e-mail ou canal combinado, com triagem, orientação e solução remota.</p>
+            <ul><li>Instalações e configurações</li><li>Suporte a Windows, Office e sistemas</li><li>Gestão de acessos e permissões</li></ul>
           </article>
-
           <article class="card">
-            <h3>Infraestrutura &amp; Servidores</h3>
-            <ul>
-              <li>Instalação e administração de Windows Server</li>
-              <li>Configuração de DHCP, DNS e Active Directory</li>
-              <li>Gestão de usuários, grupos e permissões</li>
-              <li>Replicação entre sites e planos de contingência</li>
-              <li>Alta disponibilidade e continuidade</li>
-            </ul>
+            <div class="icon">02</div>
+            <h3>Field Service</h3>
+            <p>Atendimento presencial sob demanda para resolver problemas que exigem visita técnica, troca ou validação local.</p>
+            <ul><li>Computadores, notebooks e periféricos</li><li>Rede local, Wi-Fi e impressoras</li><li>Vistorias preventivas periódicas</li></ul>
           </article>
-
           <article class="card">
-            <h3>Cloud &amp; Microsoft 365</h3>
-            <ul>
-              <li>Criação e gestão de usuários e licenças</li>
-              <li>Administração de grupos, permissões e segurança</li>
-              <li>Cloud storage na AWS: retenção e arquivamento</li>
-              <li>Otimização de custos e boas práticas</li>
-            </ul>
+            <div class="icon">03</div>
+            <h3>Gestão de Ativos</h3>
+            <p>Inventário e controle de equipamentos, softwares, licenças e ciclo de vida dos ativos de TI.</p>
+            <ul><li>Mapeamento de hardware e software</li><li>Controle de licenças</li><li>Relatórios de inventário</li></ul>
           </article>
-
           <article class="card">
-            <h3>Redes &amp; Segurança</h3>
-            <ul>
-              <li>Firewall e segurança perimetral (SonicWall, MikroTik)</li>
-              <li>VPN e interligação de unidades via L2L</li>
-              <li>Switches Cisco/Ubiquiti, VLAN e diagnóstico</li>
-              <li>Access Points UniFi e Ruckus</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>ERP &amp; Sistemas Corporativos</h3>
-            <ul>
-              <li>Administração Netsuite (Oracle)</li>
-              <li>Criação de usuários, perfis e permissões</li>
-              <li>Suporte funcional e técnico</li>
-            </ul>
-          </article>
-
-          <article class="card callout">
-            <h3>Quer um plano sob medida?</h3>
-            <p>Descreva seu cenário e receba uma proposta com escopo, prazos e SLAs.</p>
-            <div class="inline-cta">
-              <a class="btn btn-sm" href="#contato">Pedir orçamento</a>
-              <a class="btn btn-sm btn-ghost" href="https://wa.me/5511977350757" target="_blank" rel="noopener">Falar no WhatsApp</a>
-            </div>
+            <div class="icon">04</div>
+            <h3>Infra, redes e backup</h3>
+            <p>Suporte especializado para servidores, Microsoft 365, firewall, VPN, backup e continuidade operacional.</p>
+            <ul><li>Windows Server, AD, DNS e DHCP</li><li>SonicWall, MikroTik e UniFi</li><li>Backup, restore e Disaster Recovery</li></ul>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section alt" id="sobre">
-      <div class="container about">
+    <section id="como-funciona">
+      <div class="container split">
         <div>
-          <h2>Sobre a RMB</h2>
-          <p>
-            Somos uma consultoria de TI com atuação local, dedicada a transformar infraestrutura,
-            melhorar desempenho e reduzir falhas através de soluções prontas para o seu setor.
-          </p>
-          <div class="pill-row" aria-label="Capacidades">
-            <span class="pill">Operação &amp; Monitoramento</span>
-            <span class="pill">Governança &amp; SLA</span>
-            <span class="pill">Projetos e Implantação</span>
-            <span class="pill">Melhoria Contínua</span>
-          </div>
+          <span class="eyebrow">Modelo de atendimento</span>
+          <h2>Do diagnóstico ao plano de melhoria contínua.</h2>
+          <p class="lead">A proposta é organizada conforme o tamanho da sua empresa, criticidade dos usuários, horário de atendimento e necessidade de visitas presenciais.</p>
+          <a class="btn btn-primary" href="mailto:contato@rmbsolutions.com.br?subject=Avalia%C3%A7%C3%A3o%20de%20suporte%20t%C3%A9cnico%20de%20TI&body=Ol%C3%A1%2C%20quero%20uma%20avalia%C3%A7%C3%A3o%20para%20suporte%20t%C3%A9cnico%20de%20TI.%0A%0ANome%3A%0AEmpresa%3A%0ATelefone%3A%0AQuantidade%20de%20usu%C3%A1rios%3A%0APrincipais%20problemas%3A">Enviar briefing por e-mail</a>
         </div>
-
-        <div class="stats card">
-          <h3>Como trabalhamos</h3>
-          <ul class="checklist">
-            <li>Levantamento rápido do ambiente e riscos</li>
-            <li>Plano de ação priorizado por impacto</li>
-            <li>Execução com documentação e indicadores</li>
-            <li>Entrega alinhada a SLAs e rotinas</li>
-          </ul>
-          <p class="muted small">*Processo adaptável ao seu porte e stack.</p>
+        <div class="steps">
+          <div class="step"><div><h3>Assessment rápido</h3><p>Levantamento de usuários, equipamentos, sistemas, rede, acessos, dores atuais e prioridades.</p></div></div>
+          <div class="step"><div><h3>Plano de suporte</h3><p>Definição de canais, escopo, SLA, recorrência, escalonamento e rotinas preventivas.</p></div></div>
+          <div class="step"><div><h3>Operação assistida</h3><p>Atendimento, documentação, base de conhecimento, controle de chamados e acompanhamento dos ofensores.</p></div></div>
+          <div class="step"><div><h3>Relatório e evolução</h3><p>Indicadores mensais para reduzir reincidência, melhorar prazos e orientar investimentos em TI.</p></div></div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="depoimentos">
+    <section id="indicadores">
       <div class="container">
         <div class="section-head">
-          <h2>Depoimentos de clientes</h2>
-          <p class="muted">O que dizem sobre nossa entrega e suporte.</p>
+          <h2>Gestão com dados, não no improviso.</h2>
+          <p>Acompanhe a operação com indicadores práticos para tomada de decisão, melhoria de SLA e redução de indisponibilidades.</p>
         </div>
-
-        <div class="grid testimonials">
-          <figure class="card">
-            <blockquote>“A RMB Solutions resolveu nossos problemas rapidamente, proporcionando estabilidade e suporte confiável para nossa equipe.”</blockquote>
-            <figcaption>— Aya Nakamura</figcaption>
-            <div class="stars" aria-label="5 de 5">★★★★★</div>
-          </figure>
-
-          <figure class="card">
-            <blockquote>“Equipe profissional, atenta aos detalhes e sempre disponível para ajudar.”</blockquote>
-            <figcaption>— Lila Patel</figcaption>
-            <div class="stars" aria-label="4 de 5">★★★★</div>
-          </figure>
-
-          <figure class="card">
-            <blockquote>“Economizamos tempo e dinheiro após a implementação, com melhorias perceptíveis na rede e nos sistemas.”</blockquote>
-            <figcaption>— Mateo García</figcaption>
-            <div class="stars" aria-label="4 de 5">★★★★</div>
-          </figure>
+        <div class="metrics">
+          <div class="metric"><strong>TMA</strong><span>tempo médio de atendimento</span></div>
+          <div class="metric"><strong>TME</strong><span>tempo médio de espera</span></div>
+          <div class="metric"><strong>SLA</strong><span>solução dentro do prazo</span></div>
+          <div class="metric"><strong>Backlog</strong><span>chamados por status e aging</span></div>
         </div>
       </div>
     </section>
 
-    <section class="section alt" id="contato">
-      <div class="container contact">
-        <div>
-          <h2>Fale Conosco</h2>
-          <p class="muted">Entre em contato para avaliação gratuita, orçamento personalizado e agendamento de atendimentos.</p>
+    <section>
+      <div class="container grid-3">
+        <article class="card"><h3>Para empresas sem TI interno</h3><p>Tenha uma equipe técnica para cuidar de usuários, equipamentos, acessos, rede e problemas do dia a dia.</p></article>
+        <article class="card"><h3>Para equipes de TI sobrecarregadas</h3><p>Desafogue chamados recorrentes e concentre sua equipe em projetos, segurança e decisões estratégicas.</p></article>
+        <article class="card"><h3>Para ambientes em crescimento</h3><p>Organize inventário, padronize atendimento, documente processos e reduza riscos antes que virem incidentes.</p></article>
+      </div>
+    </section>
 
-          <div class="contact-cards">
-            <div class="card">
-              <h3>Endereço</h3>
-              <p>Santana de Parnaíba – Centro (SP)</p>
-            </div>
-            <div class="card">
-              <h3>Telefone / WhatsApp</h3>
-              <p><a href="tel:+5511977350757">(11) 97735-0757</a></p>
-              <p><a href="https://wa.me/5511977350757" target="_blank" rel="noopener">Abrir conversa no WhatsApp</a></p>
-            </div>
-            <div class="card">
-              <h3>E-mail</h3>
-              <p><a href="mailto:contato@rmbsolutions.com.br">contato@rmbsolutions.com.br</a></p>
-            </div>
+    <section id="contato">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <span class="eyebrow">Vamos organizar seu suporte?</span>
+            <h2>Solicite uma avaliação do seu ambiente de TI.</h2>
+            <p class="lead">Conte o cenário atual, a quantidade de usuários e os principais problemas. A RMB Solutions retorna com um caminho objetivo de atendimento.</p>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/5511977350757?text=Ol%C3%A1%2C%20quero%20uma%20avalia%C3%A7%C3%A3o%20de%20suporte%20t%C3%A9cnico%20de%20TI" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+            <a class="btn btn-ghost" href="mailto:contato@rmbsolutions.com.br?subject=Avalia%C3%A7%C3%A3o%20de%20suporte%20t%C3%A9cnico%20de%20TI">Enviar e-mail</a>
           </div>
         </div>
-
-        <form class="card form" id="formContato">
-          <h3>Peça uma avaliação</h3>
-          <p class="muted small">Este formulário abre seu e-mail com a mensagem preenchida (sem backend).</p>
-
-          <label>
-            Nome
-            <input name="nome" autocomplete="name" required placeholder="Seu nome" />
-          </label>
-
-          <label>
-            Empresa
-            <input name="empresa" autocomplete="organization" placeholder="Nome da empresa" />
-          </label>
-
-          <label>
-            E-mail
-            <input type="email" name="email" autocomplete="email" required placeholder="seu@email.com" />
-          </label>
-
-          <label>
-            Mensagem
-            <textarea name="mensagem" rows="5" required placeholder="Conte brevemente sua necessidade (backup, rede, M365, etc.)"></textarea>
-          </label>
-
-          <button class="btn" type="submit">Enviar</button>
-          <p class="muted small">Preferir WhatsApp? <a href="https://wa.me/5511977350757" target="_blank" rel="noopener">Clique aqui</a>.</p>
-        </form>
+        <div class="contact" style="margin-top:18px">
+          <div class="contact-box"><strong>Atendimento</strong><p>Segunda a sexta, das 09h às 18h<br>Emergencial 24/7 sob acordo</p></div>
+          <div class="contact-box"><strong>Contato</strong><p>WhatsApp: (11) 97735-0757<br>E-mail: contato@rmbsolutions.com.br<br>Santana de Parnaíba – SP</p></div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-row">
-      <p>© <span id="ano"></span> RMB Solutions. Todos os direitos reservados.</p>
-      <a href="#topo">Voltar ao topo ↑</a>
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <span>© <span id="year"></span> RMB Solutions. Todos os direitos reservados.</span>
+      <a href="#top">Voltar ao topo ↑</a>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
